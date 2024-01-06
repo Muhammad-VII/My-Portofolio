@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
@@ -7,26 +7,16 @@ const ParticlesContainer = () => {
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadFull(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
-  const particlesLoaded: any = (container: any) => {
-    // console.log(container);
-  };
 
   return (
     <Particles
       id="tsparticles"
       className="w-full h-full absolute-z-0"
-      particlesLoaded={particlesLoaded}
       options={{
         fullScreen: {
           enable: true,
