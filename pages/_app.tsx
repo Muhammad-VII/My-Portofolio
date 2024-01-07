@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 
 // components
 import Layout from "../components/Layout";
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <motion.div key={router.route} className="h-full">
           <Transition />
           <Component {...pageProps} />
+          <Analytics />
         </motion.div>
       </AnimatePresence>
     </Layout>
