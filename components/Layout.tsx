@@ -23,7 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <meta name="description" content="Akmal's Portfolio" />
         <meta name="keywords" content="Akmal, Portfolio, Web Developer" />
         <meta name="author" content="Mohmmed Akmal" />
-        <title>Akmal's Portfolio</title>
+        <title>Akmal&rsquo;s Portfolio</title>
       </Head>
       <TopLeftImg />
       <Nav />
