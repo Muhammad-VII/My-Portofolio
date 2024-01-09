@@ -39,10 +39,6 @@ const Home = () => {
             Angular. I thrive on the intersection of creativity and technology,
             turning innovative ideas into pixel-perfect realities,
             <br />
-            <span className="text-accent font-semibold animate-pulse">
-              let&apos;s create something amazing.
-            </span>
-            
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">
