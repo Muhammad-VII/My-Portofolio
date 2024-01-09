@@ -33,7 +33,7 @@ const Socials = () => {
       </Link>
 
       <Link
-        href={"tel:+01012114928"}
+        href={"tel:+201012114928"}
         className="hover:text-accent transition-all duration-300"
       >
         <RiPhoneFill />
