@@ -1,5 +1,6 @@
 import { Sora } from "next/font/google";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 // font settings
 const sora = Sora({
@@ -14,7 +15,9 @@ import TopLeftImg from "./TopLeftImg";
 export const metadata: Metadata = {
   title: "Akmal Portfolio",
   description: "The official Next.js Course Dashboard, built with App Router.",
-  metadataBase: new URL("https://my-portofolio-3scizhrwo-mohammed-akmals-projects.vercel.app/work"),
+  metadataBase: new URL(
+    "https://my-portofolio-five-plum.vercel.app/"
+  ),
 };
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -25,6 +28,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Nav />
       <Header />
       {children}
+      <Analytics />
     </div>
   );
 };
