@@ -10,6 +10,7 @@ import {
   FaAngular,
   FaAws,
   FaNodeJs,
+  FaAmazonPay,
 } from "react-icons/fa";
 
 import {
@@ -24,6 +25,8 @@ import {
   SiAuth0,
   SiHeroku,
   SiThreedotjs,
+  SiAngularuniversal,
+  SiPaypal,
 } from "react-icons/si";
 
 // components
@@ -40,61 +43,80 @@ import CountUp from "react-countup";
 // data
 const aboutData: any = [
   {
-    title: "skills",
+    title: "Skills",
     info: [
       {
         title: "Frontend Development",
         icons: [
-          <FaHtml5 key="icon" />,
-          <FaCss3 key="icon" />,
-          <FaJs key="icon" />,
-          <FaReact key="icon" />,
-          <SiNextdotjs key="icon" />,
-          <SiThreedotjs key="icon" />,
-          <SiFramer key="icon" />,
-          <FaAngular key="icon" />,
-          <SiFirebase key="icon" />,
-          <FaFigma key="icon" />,
-          <SiAdobexd key="icon" />,
+          <FaHtml5 key="htmlIcon" />,
+          <FaCss3 key="css3Icon" />,
+          <FaJs key=",jsIcon" />,
+          <FaReact key="reactIcon" />,
+          <SiNextdotjs key="nextjsIcon" />,
+          <SiThreedotjs key="threejsIcon" />,
+          <SiFramer key="framerIcon" />,
+          <SiPaypal key="paypalIcon" />,
+          <FaAngular key="angularIcon" />,
+          <SiFirebase key="firebaseIcon" />,
+          <FaAws key="awsIcon"/>,
+          <FaAmazonPay key="awspayIcon" />,
+          <FaFigma key="figmaIcon" />,
+          <SiAdobexd key="adobexd3Icon" />,
         ],
       },
       {
         title: "Backend Development",
         icons: [
-          <FaNodeJs key="icon" />,
-          <SiMongodb key="icon" />,
-          <SiNestjs key="icon" />,
-          <SiMicrosoftsqlserver key="icon" />,
-          <SiMysql key="icon" />,
-          <SiAuth0 key="icon" />,
-          <SiHeroku key="icon" />,
+          <FaNodeJs key="nodejsIcon" />,
+          <SiMongodb key="mongoDbIcon" />,
+          <SiNestjs key="nestjsIcon" />,
+          <SiMicrosoftsqlserver key="microsoftsqlIcon" />,
+          <SiMysql key="mysqlIcon" />,
+          <SiAuth0 key="auth0Icon" />,
+          <SiHeroku key="herokuIcon" />,
         ],
       },
     ],
   },
   {
-    title: "awards",
+    title: "Certifications",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Full Stack Web Development Diploma - Route Academy",
+        stage: "2021",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Google Analytics Certified Developer - Coursera",
+        stage: "2022",
+      },
+      {
+        title: "Google Cloud Platform Fundamentals - Coursera",
+        stage: "2022",
+      },
+      {
+        title: "AWS Certified Cloud Practitioner - AWS",
+        stage: "2023",
+      },
+      {
+        title: "AWS Certified Solutions Architect - Associate - AWS",
+        stage: "2023",
+      },
+      {
+        title: "AWS Certified Developer - Associate - AWS",
+        stage: "2023",
       },
     ],
   },
   {
-    title: "experience",
+    title: "Experience",
     info: [
-      {
-        title: "Frontend Developer - Maxim Investment group",
-        stage: "2021 - 2023",
-      },
       {
         title: "Frontend Developer - Zedny Educational Service",
         stage: "2023 - Present",
+      },
+      {
+        title: "Frontend Developer - Maxim Investment group",
+        stage: "2021 - 2023",
       },
     ],
   },
@@ -135,9 +157,12 @@ const About = () => {
             exit={"hidden"}
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I began freelancing as a developer. Since then,
-            I&apos;ve done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use.
+            My journey in the world of web development has been a dynamic
+            exploration of frontend technologies, and I specialize in harnessing
+            the power of React and Angular to build robust, scalable, and
+            responsive user interfaces. From conceptualization to
+            implementation, I am dedicated to delivering cutting-edge solutions
+            that leave a lasting impact.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -158,20 +183,10 @@ const About = () => {
                 </div>
               </div>
 
-              {/* clients */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients
-                </div>
-              </div>
-
               {/* projects */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={250} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects
@@ -197,12 +212,11 @@ const About = () => {
                     index === itemsIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
                   } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:bottom-0 after:left-0`}
-                  //todo change bottom to 1
                   onClick={() => setIndex(itemsIndex)}
                 >
                   {items.title}
                 </div>
-              ); 
+              );
             })}
           </div>
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
@@ -210,7 +224,7 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-4 items-center text-white/60"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-4 mb-3 items-center text-white/60"
                 >
                   {/* title */}
                   <div className="font-light mb-2 md:mb-0 text-nowrap">
@@ -223,7 +237,7 @@ const About = () => {
                     initial="hidden"
                     animate="show"
                     exit={"hidden"}
-                    className="grid grid-cols-7 grid-rows-2 gap-4 mb-3 md:flex md:gap-x-4"
+                    className="grid grid-cols-7 grid-rows-2 gap-4 md:flex md:gap-x-4"
                   >
                     {/* icons */}
                     {item.icons?.map((icon: any, itemIndex: any) => {

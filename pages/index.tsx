@@ -34,10 +34,15 @@ const Home = () => {
             exit="hiddin"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
-            consequatur maiores. Similique ducimus maiores, alias ut delectus
-            reiciendis nesciunt est. Quas illum velit ullam. Nam vel numquam
-            laborum iusto sit.
+            Hello, I&apos;m Mohammed Akmal, a Frontend Developer with a love for
+            crafting immersive and delightful web experiences using React and
+            Angular. I thrive on the intersection of creativity and technology,
+            turning innovative ideas into pixel-perfect realities,
+            <br />
+            <span className="text-accent font-semibold animate-pulse">
+              let&apos;s create something amazing.
+            </span>
+            
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">
