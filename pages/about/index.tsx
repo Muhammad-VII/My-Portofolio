@@ -5,7 +5,6 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
   FaFigma,
   FaAngular,
   FaAws,
@@ -25,7 +24,6 @@ import {
   SiAuth0,
   SiHeroku,
   SiThreedotjs,
-  SiAngularuniversal,
   SiPaypal,
 } from "react-icons/si";
 
