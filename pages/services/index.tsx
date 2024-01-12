@@ -17,7 +17,7 @@ const Services = () => {
       <div className="container mx-auto">
         <div className={stylesModule.s_child}>
           {/* text */}
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
+          <div className={stylesModule.t_child}>
             <motion.h2
               variants={fadeIn("up", 0.3)}
               initial="hidden"

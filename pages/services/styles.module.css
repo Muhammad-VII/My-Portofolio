@@ -9,3 +9,7 @@
 .s_child {
   @apply flex flex-col xl:flex-row gap-x-8
 }
+
+.t_child {
+  @apply text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0
+}
