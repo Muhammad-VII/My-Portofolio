@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
-import dynamic from 'next/dynamic'
 // components
 import Layout from "../components/Layout";
 import Transition from "../components/Transition";
@@ -13,16 +12,15 @@ import { AnimatePresence, motion } from "framer-motion";
 // pages
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const DynamicComponent = dynamic(() => import("../components/Layout"));
   return (
-    <DynamicComponent>
+    <Layout>
       <AnimatePresence mode="wait">
         <motion.div key={router.route} className="h-full">
           <Transition />
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
-    </DynamicComponent>
+    </Layout>
   );
 }
 
