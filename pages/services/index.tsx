@@ -2,7 +2,7 @@
 import Bulb from "@/components/Bulb";
 import Circles from "@/components/Circles";
 import ServiceSlider from "@/components/ServiceSlider";
-
+import stylesModule from './styles.module.css'
 // variants
 import { fadeIn } from "@/variants";
 
@@ -12,11 +12,11 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <div className="service_page h-full">
-      <div className="h-full bg-primary/30 py-36 flex items-center">
+    <div className={stylesModule.about_page}>
+      <div className={stylesModule.f_child}>
       <Circles />
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-x-8">
+        <div className={stylesModule.s_child}>
           {/* text */}
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
             <motion.h2
