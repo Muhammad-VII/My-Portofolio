@@ -1,6 +1,6 @@
 import { Sora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // font settings
 const sora = Sora({
   subsets: ["latin"],
@@ -30,6 +30,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       {children}
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 };
