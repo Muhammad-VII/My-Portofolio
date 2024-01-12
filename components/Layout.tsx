@@ -1,12 +1,13 @@
 import { Sora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // font settings
 const sora = Sora({
   subsets: ["latin"],
   variable: "--font-sore",
 });
 
+// components
 import Nav from "./Nav";
 import Header from "./Header";
 import TopLeftImg from "./TopLeftImg";
