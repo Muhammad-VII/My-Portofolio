@@ -9,6 +9,7 @@ import { fadeIn } from "@/variants";
 // framer motion
 import { motion } from "framer-motion";
 
+
 const Services = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">

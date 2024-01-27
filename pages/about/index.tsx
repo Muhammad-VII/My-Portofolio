@@ -56,7 +56,7 @@ const aboutData: any = [
           <SiPaypal key="paypalIcon" />,
           <FaAngular key="angularIcon" />,
           <SiFirebase key="firebaseIcon" />,
-          <FaAws key="awsIcon"/>,
+          <FaAws key="awsIcon" />,
           <FaAmazonPay key="awspayIcon" />,
           <FaFigma key="figmaIcon" />,
           <SiAdobexd key="adobexd3Icon" />,
@@ -240,7 +240,10 @@ const About = () => {
                     {/* icons */}
                     {item.icons?.map((icon: any, itemIndex: any) => {
                       return (
-                        <div key={itemIndex} className="text-2xl text-white">
+                        <div
+                          key={itemIndex}
+                          className="text-2xl text-white hover:text-accent/100 transition-all"
+                        >
                           {icon}
                         </div>
                       );
