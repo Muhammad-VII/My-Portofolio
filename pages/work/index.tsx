@@ -33,10 +33,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
-              alias laudantium consequatur tempora quia explicabo quo tempore
-              labore saepe, eaque autem? Et sequi eum excepturi eligendi itaque
-              deserunt labore sapiente.
+              Explore a showcase of my meticulously crafted projects that blend creativity and functionality. Each endeavor reflects my passion for creating seamless user experience, utilizing cutting-edge technologies, and delivering visually stunning results. From responsive web designs to interactive applications, witness the fusion of code and design in every project i undertake.
             </motion.p>
           </div>
           {/* slider */}

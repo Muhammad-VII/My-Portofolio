@@ -8,23 +8,18 @@ import {
   FaFigma,
   FaAngular,
   FaAws,
-  FaNodeJs,
-  FaAmazonPay,
+  FaSass,
 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
   SiFramer,
   SiAdobexd,
-  SiMongodb,
   SiFirebase,
-  SiNestjs,
-  SiMicrosoftsqlserver,
-  SiMysql,
-  SiAuth0,
-  SiHeroku,
   SiThreedotjs,
-  SiPaypal,
+  SiTypescript,
+  SiJquery,
+  SiGithub,
 } from "react-icons/si";
 
 // components
@@ -48,32 +43,34 @@ const aboutData: any = [
         icons: [
           <FaHtml5 key="htmlIcon" />,
           <FaCss3 key="css3Icon" />,
+          <FaSass key="sassIcon" />,
+          <SiJquery key=",jsIcon" />,
           <FaJs key=",jsIcon" />,
+          <SiTypescript key=",jsIcon" />,
           <FaReact key="reactIcon" />,
           <SiNextdotjs key="nextjsIcon" />,
-          <SiThreedotjs key="threejsIcon" />,
-          <SiFramer key="framerIcon" />,
-          <SiPaypal key="paypalIcon" />,
           <FaAngular key="angularIcon" />,
+          <SiFramer key="framerIcon" />,
+          <SiThreedotjs key="threejsIcon" />,
           <SiFirebase key="firebaseIcon" />,
           <FaAws key="awsIcon" />,
-          <FaAmazonPay key="awspayIcon" />,
+          <SiGithub key="awspayIcon" />,
           <FaFigma key="figmaIcon" />,
           <SiAdobexd key="adobexd3Icon" />,
         ],
       },
-      {
-        title: "Backend Development",
-        icons: [
-          <FaNodeJs key="nodejsIcon" />,
-          <SiMongodb key="mongoDbIcon" />,
-          <SiNestjs key="nestjsIcon" />,
-          <SiMicrosoftsqlserver key="microsoftsqlIcon" />,
-          <SiMysql key="mysqlIcon" />,
-          <SiAuth0 key="auth0Icon" />,
-          <SiHeroku key="herokuIcon" />,
-        ],
-      },
+      // {
+      //   title: "Backend Development",
+      //   icons: [
+      //     <FaNodeJs key="nodejsIcon" />,
+      //     <SiMongodb key="mongoDbIcon" />,
+      //     <SiNestjs key="nestjsIcon" />,
+      //     <SiMicrosoftsqlserver key="microsoftsqlIcon" />,
+      //     <SiMysql key="mysqlIcon" />,
+      //     <SiAuth0 key="auth0Icon" />,
+      //     <SiHeroku key="herokuIcon" />,
+      //   ],
+      // },
     ],
   },
   {
@@ -225,10 +222,14 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-4 mb-3 items-center text-white/60"
                 >
                   {/* title */}
-                  <div className="font-light mb-2 md:mb-0 text-nowrap">
-                    {item.title}
-                  </div>
-                  <div className="hidden md:flex">-</div>
+
+                  {index != 0 && (
+                    <div className="font-light mb-2 md:mb-0 text-nowrap">
+                      {item.title}
+                    </div>
+                  )}
+
+                  {index != 0 && <div className="hidden md:flex">-</div>}
                   {item.stage && <div>{item.stage}</div>}
                   <motion.div
                     variants={fadeIn("left", 0.4)}
