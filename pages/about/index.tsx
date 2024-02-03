@@ -236,14 +236,14 @@ const About = () => {
                     initial="hidden"
                     animate="show"
                     exit={"hidden"}
-                    className="grid grid-cols-7 grid-rows-2 gap-4 md:flex md:gap-x-4"
+                    className="grid grid-cols-7 grid-rows-2 gap-4 md:flex md:gap-x-4 flex-wrap"
                   >
                     {/* icons */}
                     {item.icons?.map((icon: any, itemIndex: any) => {
                       return (
                         <div
                           key={itemIndex}
-                          className="text-2xl text-white hover:text-accent/100 transition-all"
+                          className="text-4xl text-white hover:text-accent/100 transition-all"
                         >
                           {icon}
                         </div>
