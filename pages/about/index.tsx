@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // icons
 import {
   FaHtml5,
@@ -32,6 +32,7 @@ import { fadeIn } from "@/variants";
 
 // counter
 import CountUp from "react-countup";
+import DownloadResume from "@/components/DownloadResume";
 
 // data
 const aboutData: any = [
@@ -119,6 +120,15 @@ const aboutData: any = [
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const [showComponent, setShowComponent] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowComponent(true);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
@@ -256,6 +266,7 @@ const About = () => {
           </div>
         </motion.div>
       </div>
+      {showComponent && <DownloadResume />}
     </div>
   );
 };

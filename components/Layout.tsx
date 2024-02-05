@@ -11,6 +11,7 @@ import Nav from "./Nav";
 import Header from "./Header";
 import TopLeftImg from "./TopLeftImg";
 import Head from "next/head";
+import DownloadResume from "./DownloadResume";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
