@@ -20,6 +20,9 @@ import {
   SiTypescript,
   SiJquery,
   SiGithub,
+  SiIonic,
+  SiJira,
+  SiNx
 } from "react-icons/si";
 
 // components
@@ -51,6 +54,8 @@ const aboutData: any = [
           <FaReact key="reactIcon" />,
           <SiNextdotjs key="nextjsIcon" />,
           <FaAngular key="angularIcon" />,
+          <SiNx key="nxIcon" />,
+          <SiIonic key="ionicIcon" />,
           <SiFramer key="framerIcon" />,
           <SiThreedotjs key="threejsIcon" />,
           <SiFirebase key="firebaseIcon" />,
@@ -58,6 +63,7 @@ const aboutData: any = [
           <SiGithub key="awspayIcon" />,
           <FaFigma key="figmaIcon" />,
           <SiAdobexd key="adobexd3Icon" />,
+          <SiJira key="jiraIcon" />,
         ],
       },
       // {
@@ -82,33 +88,29 @@ const aboutData: any = [
         stage: "2021",
       },
       {
+        title: "RXJS AND OBSERVABLES - Udemy",
+        stage: "2022",
+      },
+      {
         title: "Google Analytics Certified Developer - Coursera",
         stage: "2022",
       },
       {
         title: "Google Cloud Platform Fundamentals - Coursera",
         stage: "2022",
-      },
-      {
-        title: "AWS Certified Cloud Practitioner - AWS",
-        stage: "2023",
-      },
-      {
-        title: "AWS Certified Solutions Architect - Associate - AWS",
-        stage: "2023",
-      },
-      {
-        title: "AWS Certified Developer - Associate - AWS",
-        stage: "2023",
-      },
+      }
     ],
   },
   {
     title: "Experience",
     info: [
       {
+        title: "Frontend Engineer - Kashier Payment solutions",
+        stage: "2024 - Present",
+      },
+      {
         title: "Frontend Developer - Zedny Educational Service",
-        stage: "2023 - Present",
+        stage: "2023 - 2024",
       },
       {
         title: "Frontend Developer - Maxim Investment group",
@@ -164,7 +166,7 @@ const About = () => {
           >
             My journey in the world of web development has been a dynamic
             exploration of frontend technologies, and I specialize in harnessing
-            the power of React and Angular to build robust, scalable, and
+            the power of React and Angular, to build robust, scalable, and
             responsive user interfaces. From conceptualization to
             implementation, I am dedicated to delivering cutting-edge solutions
             that leave a lasting impact.

@@ -1,6 +1,15 @@
 import Image from "next/image";
 // data
-const workSlides = {
+
+interface SlideData {
+  slides: {
+    images: {
+      title: string;
+      path: string;
+    }[];
+  }[]
+}
+const workSlides: SlideData = {
   slides: [
     {
       images: [
@@ -8,9 +17,10 @@ const workSlides = {
           title: "https://maxim-mig.netlify.app/",
           path: "/maxim_project.jpg",
         },
+
         {
-          title: "https://hoobank-landing-ten.vercel.app/",
-          path: "/hoo_bank.jpg",
+          title: "https://www.kashier.io/",
+          path: "/kashier.jpg",
         },
         {
           title: "https://zedny.com/",
@@ -42,6 +52,10 @@ const workSlides = {
           title: "https://www.iskander-lbc.com/",
           path: "/iskander_lbc.jpg",
         },
+        // {
+        //   title: "https://hoobank-landing-ten.vercel.app/",
+        //   path: "/hoo_bank.jpg",
+        // },
       ],
     },
   ],
@@ -74,11 +88,11 @@ const WorkSlider = () => {
       modules={[Pagination, Autoplay, Mousewheel]}
       className="h-[280px] sm:h-[480px]"
     >
-      {workSlides.slides.map((slide: any, index) => {
+      {workSlides.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-              {slide.images.map((image: any, index: number) => {
+              {slide.images.map((image, index: number) => {
                 return (
                   <div
                     key={index}
@@ -94,8 +108,8 @@ const WorkSlider = () => {
                           quality={100}
                           src={image.path}
                           width={500}
-                          height={300}
-                          alt=""
+                          height={500}
+                          alt={image.title}
                         />
                         {/* overlay gradiant */}
                         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
