@@ -9,6 +9,7 @@ import {
   FaAngular,
   FaAws,
   FaSass,
+  FaNodeJs,
 } from "react-icons/fa";
 
 import {
@@ -22,7 +23,13 @@ import {
   SiGithub,
   SiIonic,
   SiJira,
-  SiNx
+  SiNx,
+  SiMongodb,
+  SiNestjs,
+  SiMicrosoftsqlserver,
+  SiMysql,
+  SiAuth0,
+  SiHeroku
 } from "react-icons/si";
 
 // components
@@ -36,6 +43,36 @@ import { fadeIn } from "@/variants";
 // counter
 import CountUp from "react-countup";
 import DownloadResume from "@/components/DownloadResume";
+
+// icon to name mapping
+const iconToName: { [key: string]: string } = {
+  FaHtml5: "HTML5",
+  FaCss3: "CSS3",
+  FaSass: "SASS",
+  SiJquery: "jQuery",
+  FaJs: "JavaScript",
+  SiTypescript: "TypeScript",
+  FaReact: "React",
+  SiNextdotjs: "Next.js",
+  FaAngular: "Angular",
+  SiNx: "Nx",
+  SiIonic: "Ionic",
+  SiFramer: "Framer Motion",
+  SiThreedotjs: "Three.js",
+  SiFirebase: "Firebase",
+  FaAws: "AWS",
+  SiGithub: "GitHub",
+  FaFigma: "Figma",
+  SiAdobexd: "Adobe XD",
+  SiJira: "Jira",
+  FaNodeJs: "Node.js",
+  SiMongodb: "MongoDB",
+  SiNestjs: "NestJS",
+  SiMicrosoftsqlserver: "Microsoft SQL Server",
+  SiMysql: "MySQL",
+  SiAuth0: "Auth0",
+  SiHeroku: "Heroku"
+};
 
 // data
 const aboutData: any = [
@@ -64,20 +101,15 @@ const aboutData: any = [
           <FaFigma key="figmaIcon" />,
           <SiAdobexd key="adobexd3Icon" />,
           <SiJira key="jiraIcon" />,
+          <FaNodeJs key="nodejsIcon" />,
+          <SiMongodb key="mongoDbIcon" />,
+          <SiNestjs key="nestjsIcon" />,
+          <SiMicrosoftsqlserver key="microsoftsqlIcon" />,
+          <SiMysql key="mysqlIcon" />,
+          <SiAuth0 key="auth0Icon" />,
+          <SiHeroku key="herokuIcon" />,
         ],
       },
-      // {
-      //   title: "Backend Development",
-      //   icons: [
-      //     <FaNodeJs key="nodejsIcon" />,
-      //     <SiMongodb key="mongoDbIcon" />,
-      //     <SiNestjs key="nestjsIcon" />,
-      //     <SiMicrosoftsqlserver key="microsoftsqlIcon" />,
-      //     <SiMysql key="mysqlIcon" />,
-      //     <SiAuth0 key="auth0Icon" />,
-      //     <SiHeroku key="herokuIcon" />,
-      //   ],
-      // },
     ],
   },
   {
@@ -105,16 +137,24 @@ const aboutData: any = [
     title: "Experience",
     info: [
       {
+        title: "Senior Frontend Engineer - Deal APP",
+        stage: "Dec 2024 - Present",
+      },
+      {
+        title: "Senior Frontend Engineer - Etisalat Egypt",
+        stage: "Mar 2024 - Dec 2024",
+      },
+      {
         title: "Frontend Engineer - Kashier Payment solutions",
-        stage: "2024 - Present",
+        stage: "Feb 2024 - Apr 2024",
       },
       {
         title: "Frontend Developer - Zedny Educational Service",
-        stage: "2023 - 2024",
+        stage: "Mar 2023 - Feb 2024",
       },
       {
         title: "Frontend Developer - Maxim Investment group",
-        stage: "2021 - 2023",
+        stage: "Sep 2021 - Jan 2023",
       },
     ],
   },
@@ -127,7 +167,7 @@ const About = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowComponent(true);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -165,8 +205,8 @@ const About = () => {
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
             My journey in the world of web development has been a dynamic
-            exploration of frontend technologies, and I specialize in harnessing
-            the power of React and Angular, to build robust, scalable, and
+            exploration of frontend technologies and backend technologies, at the end i find my self falling in love with frontend technologies so i decided to specialize in harnessing
+            the power of Angular and React, to build robust, scalable, and
             responsive user interfaces. From conceptualization to
             implementation, I am dedicated to delivering cutting-edge solutions
             that leave a lasting impact.
@@ -183,7 +223,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={3} duration={5} delay={1} /> +
+                  <CountUp start={0} end={4} duration={4} delay={0.5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
@@ -193,7 +233,7 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={300} duration={3} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects
@@ -252,12 +292,16 @@ const About = () => {
                   >
                     {/* icons */}
                     {item.icons?.map((icon: any, itemIndex: any) => {
+                      const iconName = icon.type.name;
                       return (
                         <div
                           key={itemIndex}
-                          className="text-4xl text-white hover:text-accent/100 transition-all"
+                          className="text-4xl text-white hover:text-accent/100 transition-all relative group"
                         >
                           {icon}
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black/80 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                            {iconToName[iconName] || iconName}
+                          </div>
                         </div>
                       );
                     })}
